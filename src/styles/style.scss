@@ -1,0 +1,15 @@
+// pages
+@import './pages/homepage';
+
+
+// core
+@import './core/overwrite';
+@import './core/typography';
+@import './core/variable';
+
+// SECTIONS
+@import './sections/voting';
+@import './sections/housemate';
+
+//utils
+@import './util/spacer';
