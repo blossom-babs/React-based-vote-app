@@ -1,22 +1,18 @@
 import React from "react";
-// import image
-import Image from "../src/assets/background.png";
-// import styles
-import "./styles/style.scss";
-// import components
-import Voting from "./components/Voting";
+import "./assets/scss/app.scss";
+import Leaderboard from "./Pages/Leaderboard";
+import Voting from "./Pages/Voting";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-const styleImage = {
-  background: `url(${Image})`,
-};
-
-console.log(Image);
-function App() {
+export default function App() {
   return (
-    <div className="home" style={styleImage}>
-      <Voting />
+    <div className="home">
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Voting} />
+          <Route path="/leaderboard" component={Leaderboard} />
+        </Switch>
+      </Router>
     </div>
   );
 }
-
-export default App;

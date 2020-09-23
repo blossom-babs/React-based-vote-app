@@ -1,0 +1,31 @@
+.housemate-ranking {
+  background: #ffffff;
+  border: 1px solid rgba(black, 0.09);
+  box-sizing: border-box;
+  border-radius: 7px;
+  padding: 15px 10px;
+  margin-bottom: 20px;
+
+  img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 25px;
+  }
+
+  &__name {
+    font-size: 1.3rem;
+  }
+
+  .candidate-position {
+    background-color: #1e2a5a;
+    color: #fff;
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+
+    &__number {
+      font-size: 20px;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+.voting {
+  background: white;
+  max-width: 760px;
+  border-radius: 9px;
+  padding: 30px 36px;
+  margin: 0 auto;
+  &__box {
+    background: $darkBlue;
+    border-radius: 8px;
+    padding: 36px 25px 20px;
+    text-align: center;
+    color: white;
+    &__title {
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 21px;
+    }
+    &__numbers {
+      font-weight: 900;
+      font-size: 65px;
+      line-height: 76px;
+      color: rgba($color: #fff, $alpha: 0.6);
+    }
+    &__progressBar {
+      background: #3b4558;
+      border-radius: 22px;
+      height: 11px;
+      margin-top: 25px;
+      position: relative;
+      .progress {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 9;
+        border-radius: 22px;
+        background: $yellow;
+        transition: all 0.5s ease-in-out;
+        @for $i from 1 through 100 {
+          &.length-#{$i} {
+            width: $i * 1%;
+          }
+        }
+      }
+    }
+  }
+}

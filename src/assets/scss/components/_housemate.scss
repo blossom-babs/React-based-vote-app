@@ -1,0 +1,55 @@
+.housemate {
+  background: #ffffff;
+  border: 1px solid rgba(black, 0.09);
+  box-sizing: border-box;
+  border-radius: 7px;
+  padding: 15px 13px 26px;
+  margin-bottom: 20px;
+  img {
+    width: 68px;
+    height: 68px;
+    object-fit: cover;
+    border-radius: 34px;
+  }
+  &__name {
+    font-size: 18px;
+    line-height: 21px;
+  }
+  &__vote {
+    height: 34px;
+    background: #ffffff;
+    border: 1px solid rgba(black, 0.1);
+    box-sizing: border-box;
+    border-radius: 7px;
+    margin-top: 24px;
+    display: inline-flex;
+    width: 125px;
+    &__control {
+      width: 33px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      font-size: 18px;
+      font-weight: bold;
+      background-color: transparent;
+      border: none;
+      padding: unset;
+      color: unset;
+    }
+    &__divider {
+      height: 100%;
+      width: 1px;
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+    &__count {
+      flex: 1;
+      display: flex;
+      width: 15px;
+      border: none;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

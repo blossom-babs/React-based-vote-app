@@ -1,0 +1,11 @@
+body {
+  background: url('/img/background.png');
+}
+
+.home {
+  padding-top: 60px;
+
+  &__votes {
+    padding: 50px 0 0;
+  }
+}

@@ -1,0 +1,15 @@
+button,
+.button {
+  background: $darkBlue;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 62px;
+  font-size: 18px;
+  line-height: 21px;
+  cursor: pointer;
+
+  &:focus {
+    outline: 0;
+  }
+}
