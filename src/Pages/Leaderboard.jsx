@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Redirect, useHistory } from "react-router-dom";
 import HousemateRank from "../components/HousemateRank";
 
+// eslint-disable-next-line
+
 export default function Leaderboard() {
   //start
   function getSavedValue(key, initialValue) {
@@ -12,6 +14,7 @@ export default function Leaderboard() {
     return initialValue;
   }
 
+  // eslint-disable-next-line
   const useLocalStorage = (key, initialValue) => {
     const [value, setValue] = useState(() => {
       return getSavedValue(key, initialValue);

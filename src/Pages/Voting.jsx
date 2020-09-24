@@ -3,6 +3,8 @@ import Housemate from "../components/Housemate";
 import staticHousemates from "../components/HousematesList";
 import { useHistory } from "react-router-dom";
 
+// eslint-disable-next-line
+
 export default function Voting() {
   // the total number of votes
   const maximumVotes = 10;
