@@ -4,9 +4,11 @@ import staticHousemates from "../components/HousematesList";
 import { useHistory } from "react-router-dom";
 
 export default function Voting() {
+  // the total number of votes
   const maximumVotes = 10;
   const [vote, setVote] = useState(maximumVotes);
   const [housemates, updateHousemates] = useState(staticHousemates);
+  // error state
   const [errorState, setErrorState] = useState(false);
   const history = useHistory();
 
@@ -50,6 +52,7 @@ export default function Voting() {
     updateHousemates(housematesCopy);
   };
 
+  // decrement vote
   const downVote = (hm) => {
     setErrorState(false);
     if (hm.votes <= 0) {
@@ -89,6 +92,7 @@ export default function Voting() {
     setNumberOfRemainingVotes();
   };
 
+  // set number of remaining votes
   const setNumberOfRemainingVotes = () => {
     let totalVotesNow = 0;
     housemates.forEach((hmates) => {
@@ -98,6 +102,7 @@ export default function Voting() {
     setVote(maximumVotes - totalVotesNow);
   };
 
+  // check if voting is possible
   const checkIfVotingIsPossible = (vote, hm) => {
     const housematesCopy = [];
     hm.votes = vote;
@@ -119,6 +124,7 @@ export default function Voting() {
     return false;
   };
 
+  // view leaderboard
   const viewLeaderboard = () => {
     if (vote > 0) {
       setErrorState(true);
